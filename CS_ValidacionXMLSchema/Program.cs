@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CS_ValidacionXMLSchema
 {
@@ -11,8 +7,8 @@ namespace CS_ValidacionXMLSchema
         static void Main(string[] args)
         {
             ControlXML mControlXML = new ControlXML();
-            mControlXML.AbrirEsquema("compras.xsd");
-            mControlXML.AbrirXML("compras.xml");
+            mControlXML.AbrirEsquema("archivo.xsd");
+            mControlXML.AbrirXML("archivo.xml");
             mControlXML.LeerXML();
             Console.ReadKey();
         }

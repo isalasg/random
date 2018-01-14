@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 using System.Xml.Schema;
@@ -80,9 +76,12 @@ namespace CS_ValidacionXMLSchema
         {
             string textoxml = "";
 
-            while (ArchivoXML.Read()) 
+            if (ArchivoXML != null)
             {
-                textoxml += ArchivoXML.Value;
+                while (ArchivoXML.Read())
+                {
+                    textoxml += ArchivoXML.Value;
+                }
             }
 
             if ((!existeerror) && (!existewarning))
